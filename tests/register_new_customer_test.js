@@ -9,13 +9,16 @@ Scenario('test happy path', (I) => {
     I.checkOption('//*[@id="id_gender1"]')
     I.fillField('customer_firstname', faker.name.firstName())
     I.fillField('customer_lastname', faker.name.lastName())
+    //mail is autofilled with email_create value. Uncomment to use custom value
+    //I.fillField('email','michalovic_homework_testemail@testNull.org')
     I.fillField('passwd', faker.internet.password())
     I.selectOption('days', '2')
     I.selectOption('months', '3')
     I.selectOption('years', '1990')
     I.checkOption('//*[@id="newsletter"]')
     I.checkOption('//*[@id="optin"]')
-    //I.fillField('firstname', 'Pan')
+    //firstname and lastname are autofilled with customer_firstname and customer_lastname values. Uncomment to use custom values.
+    //I.fillField('firstname', 'Pan') 
     //I.fillField('lastname', 'Jan')
     I.fillField('company', 'Firma')
     I.fillField('address1', 'Happy Place')
